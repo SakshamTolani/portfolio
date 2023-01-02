@@ -7,7 +7,10 @@ import {
   BsInstagram,
   BsLinkedin,
   BsFacebook,
+  BsMailbox,
+  BsMailbox2,
 } from "react-icons/bs";
+import {GrMail} from "react-icons/gr"
 import "./Footer.css";
 
 const Footer = () => {
@@ -34,18 +37,18 @@ const Footer = () => {
 
       <div>
         <Typography variant="h6">Social Media</Typography>
-        <a href="https://github.com/SakshamTolani/" target="black">
+        <a href="https://github.com/SakshamTolani/" target="blank">
           <BsGithub />
         </a>
-        <a href="https://www.facebook.com/saksham.tolani/" target="black">
-          <BsFacebook />
+        <a href="mailto:sakshamtolani@gmail.com" target="blank">
+          <GrMail />
         </a>
-        <a href="https://instagram.com/sakshamtolani_/" target="black">
+        <a href="https://instagram.com/sakshamtolani_/" target="blank">
           <BsInstagram />
         </a>
         <a
           href="https://www.linkedin.com/in/saksham-tolani-5b1b831a2/"
-          target="black"
+          target="blank"
         >
           <BsLinkedin />
         </a>

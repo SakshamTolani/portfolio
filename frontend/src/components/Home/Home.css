@@ -330,7 +330,7 @@
 }
 .homeYoutube .homeYoutubeWrapper .row .col .counter-box > svg{
   font-size: 40px;
-  color: #009688;
+  color: #3636c2;
   margin-left: 45%;
   display: block;
 }
@@ -338,6 +338,30 @@
 .home {
   background-color: black;
 }
+
+@media screen and (max-width:600px) {
+  .homeYoutube .homeYoutubeWrapper .counter-box{
+    width: 100%;
+    height: 120px;
+  }
+
+  .homeYoutube .homeYoutubeWrapper .row .col h2,span{
+    margin: auto;
+    font-size: 20px;
+    color: #000;
+  }
+
+  .homeYoutube .homeYoutubeWrapper .row .col h4{
+    font-size: 13px;
+  }
+
+  .homeYoutube .homeYoutubeWrapper .row .col .counter-box > svg{
+    font-size: 40px;
+    margin-left: 24%;
+  }
+}
+
+
 
 @keyframes cubeRotation {
   to {

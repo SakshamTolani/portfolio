@@ -6,7 +6,7 @@ import venusImage from "../../Images/venus.jpg";
 import spaceImage from "../../Images/space.jpg";
 import { Typography } from "@mui/material";
 import VisibilitySensor from 'react-visibility-sensor';
-import TimeLine from "../Timeline/TimeLine";
+import TimeLine from "../TimeLine/TimeLine.jsx";
 import { MouseOutlined } from "@mui/icons-material";
 import {
   SiCplusplus,
@@ -184,7 +184,7 @@ function Home({ timelines, skills }) {
               <span className="wrap">{text}</span>
             </span>
           </h1>
-          <Link to="/contact">
+          <Link to="#" onClick={()=>window.location = 'mailto:sakshamtolani@gmail.com'}>
             LET'S CONNECT <BiRightArrowAlt />
           </Link>
         </div>
