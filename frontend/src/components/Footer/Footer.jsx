@@ -1,7 +1,13 @@
 import { Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
-import { BsGithub, BsYoutube, BsInstagram, BsLinkedin, BsFacebook } from "react-icons/bs";
+import {
+  BsGithub,
+  BsYoutube,
+  BsInstagram,
+  BsLinkedin,
+  BsFacebook,
+} from "react-icons/bs";
 import "./Footer.css";
 
 const Footer = () => {
@@ -11,9 +17,16 @@ const Footer = () => {
         <Typography variant="h5">About Me</Typography>
         <Typography>
           Hey, my name is Saksham Tolani. I am a Full-Stack Developer and a
-          tutorial on Youtube channel called <b> 6 Pack Programmer</b>
+          Computer Science student for life. I decided to study computer science
+          because of my interest in computer systems from an early age. Using
+          logic to fulfil different application requirements is a challenge I
+          always liked. I have been looking for a career opportunity where I can
+          use my skills to contribute to real-time projects and gain
+          professional experience as a software engineer. My short-term goals in
+          life include upskilling myself in artificial intelligence algorithms
+          and contributing to the growth of the organisation via leveraging the
+          power of data analytics.
         </Typography>
-
         <Link to="/contact" className="footerContactBtn">
           <Typography>Contact Us</Typography>
         </Link>
@@ -30,7 +43,10 @@ const Footer = () => {
         <a href="https://instagram.com/sakshamtolani_/" target="black">
           <BsInstagram />
         </a>
-        <a href="https://www.linkedin.com/in/saksham-tolani-5b1b831a2/" target="black">
+        <a
+          href="https://www.linkedin.com/in/saksham-tolani-5b1b831a2/"
+          target="black"
+        >
           <BsLinkedin />
         </a>
       </div>

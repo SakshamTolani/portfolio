@@ -312,6 +312,7 @@
   flex-basis: 22%;
   text-align: center;
   color: #555;
+  animation: contactFormTransition 1s linear forwards;
 }
 .homeYoutube .homeYoutubeWrapper .counter-box{
   width: 100%;
@@ -347,6 +348,16 @@
 @keyframes cubeShadow {
   to {
     transform: scale(1.2) translateY(-10px);
+  }
+}
+
+@keyframes contactFormTransition {
+  from {
+      transform: translateY(-100%);
+  }
+
+  to {
+      transform: translateY(0);
   }
 }
 

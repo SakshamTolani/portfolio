@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
 import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import moonImage from "../../Images/moon.jpg";
 import venusImage from "../../Images/venus.jpg";
 import spaceImage from "../../Images/space.jpg";
 import { Typography } from "@mui/material";
+import VisibilitySensor from 'react-visibility-sensor';
 import TimeLine from "../Timeline/TimeLine";
 import { MouseOutlined } from "@mui/icons-material";
 import {
@@ -22,10 +22,11 @@ import {
   SiJava,
 } from "react-icons/si";
 import { BiRightArrowAlt } from "react-icons/bi";
-import {AiOutlineProject} from "react-icons/ai"
-import {MdBusiness, MdOutlineWork} from "react-icons/md"
-import {GiSkills} from "react-icons/gi"
+import { AiOutlineProject } from "react-icons/ai";
+import { MdBusiness, MdOutlineWork } from "react-icons/md";
+import { GiSkills } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import CountUp from "react-countup";
 
 function Home({ timelines, skills }) {
   const [loopNum, setLoopNum] = useState(0);
@@ -253,47 +254,84 @@ function Home({ timelines, skills }) {
       <div className="homeYoutube">
         <Typography variant="h3"> STATISTICS</Typography>
         <div className="homeYoutubeWrapper">
-            <div class="title">
-              <h1>ABOUT STUDIO</h1>
-              <p>
-                Duis vulputate et nulla ac dapibus. Nullam feugiat massa elit,
-                at scelerisque urna facilisis id. Suspendisse commodo
-                scelerisque sem sit amet aliquam. Curabitur nulla lectus,
-                pretium ac arcu sed, laoreet eleifend nunc.Duis vulputate et
-                nulla ac dapibus. Nullam feugiat massa elit.
-              </p>
-            </div>
+          <div class="title">
+            <h1>ABOUT STUDIO</h1>
+            <p>
+              Duis vulputate et nulla ac dapibus. Nullam feugiat massa elit, at
+              scelerisque urna facilisis id. Suspendisse commodo scelerisque sem
+              sit amet aliquam. Curabitur nulla lectus, pretium ac arcu sed,
+              laoreet eleifend nunc.Duis vulputate et nulla ac dapibus. Nullam
+              feugiat massa elit.
+            </p>
+          </div>
 
-            <div class="row">
-              <div class="col">
-                <div class="counter-box">
-                  <AiOutlineProject/>
-                  <h2 class="counter">20+</h2>
-                  <h4>TOTAL PROJECTS</h4>
-                </div>
-              </div>
-              <div class="col">
-                <div class="counter-box">
-                  <MdOutlineWork/>
-                  <h2 class="counter">16+</h2>
-                  <h4>EXPERIENCE (IN MONTHS)</h4>
-                </div>
-              </div>
-              <div class="col">
-                <div class="counter-box">
-                  <GiSkills/>
-                  <h2 class="counter">12+</h2>
-                  <h4>SKILLS</h4>
-                </div>
-              </div>
-              <div class="col">
-                <div class="counter-box">
-                  <MdBusiness/>
-                  <h2 class="counter">6+</h2>
-                  <h4>COMPANIES WORKED WITH</h4>
-                </div>
+          <div class="row">
+            <div class="col">
+              <div class="counter-box">
+                <AiOutlineProject />
+                <h2 class="counter">
+                <CountUp end={20} redraw={false} duration={2}>
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <span ref={countUpRef} />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
+                  +
+                </h2>
+                <h4>TOTAL PROJECTS</h4>
               </div>
             </div>
+            <div class="col">
+              <div class="counter-box">
+                <MdOutlineWork />
+                {/* <h2 class="counter"><CountUp end={16} duration={3}/>+</h2> */}
+                <h2 class="counter">
+                  <CountUp end={16} redraw={false} duration={2}>
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <span ref={countUpRef} />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
+                  +
+                </h2>
+                <h4>EXPERIENCE (IN MONTHS)</h4>
+              </div>
+            </div>
+            <div class="col">
+              <div class="counter-box">
+                <GiSkills />
+                <h2 class="counter">
+                <CountUp end={12} redraw={false} duration={2}>
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <span ref={countUpRef} />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
+                  +
+                </h2>
+                <h4>SKILLS</h4>
+              </div>
+            </div>
+            <div class="col">
+              <div class="counter-box">
+                <MdBusiness />
+                <h2 class="counter">
+                <CountUp end={6} redraw={false} duration={2}>
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <span ref={countUpRef} />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
+                  +
+                </h2>
+                <h4>COMPANIES WORKED WITH</h4>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
