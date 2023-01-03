@@ -87,18 +87,22 @@
 
 .projectCard>div:last-child>h4 {
     text-align: center;
+    text-decoration: underline;
 }
 
 .projectCard>div:last-child>p {
+    font-family: "Georgia";
+    font-size: 1.4em;
     letter-spacing: 5px;
     word-spacing: 5px;
-    text-align: right;
+    text-align: center;
 }
 
 .projectCard>div:last-child>h6 {
     font-family: "Montserrat";
     font-weight: bolder;
     color: black;
+    text-align: center;
 }
 
 .projectCard>div>img {
