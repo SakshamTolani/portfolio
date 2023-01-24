@@ -62,6 +62,7 @@
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
   color: #fff;
+  font-size: 50px;
 }
 
 .homeCanvasContainer {
